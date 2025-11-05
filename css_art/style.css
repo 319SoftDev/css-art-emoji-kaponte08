@@ -109,3 +109,11 @@
     bottom: -38%;
 
 }
+.neck{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    height:15px;
+    width: 10px;
+    left: 49.8%;
+    bottom: -41%;
+}
