@@ -6,9 +6,9 @@
 
 .container{
     display: flex;
-    width: 100vw;
+    width: 98vw;
     background-color: rgb(238, 165, 202);
-    height: 150vh;
+    height: 250vh;
     flex-direction: column;
 
 }
@@ -16,6 +16,7 @@
 .box{
     flex:1;
     margin: 10px;
+    padding: 20px;
     border: 2px solid black;
     background-color: rgb(235, 233, 255);
     border-radius: 20px;
@@ -29,8 +30,8 @@
     width: 200px;
     height: 200px;
     border-radius: 200px;
-    position: absolute;
-    left:40%;
+    position: relative;
+    left:35%;
     background-color: #ffeeb6;
     transition: width 2s ;
 }
@@ -39,14 +40,12 @@
     height: 20%;
 }
 
-.bottomHrt{
+.beak{
     width: 2px;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-top: 80px solid #c72121;
-    position: absolute;
-    left: 25%;
-    right: 35%;
+    transition: border-top 2s;
 }
 .topHrt{
     width: 70px;
@@ -54,6 +53,7 @@
     background-color: #ffffff;
     border-radius: 200px;
     top:9%;
+    transition: width 2s height 2s;
 }
 .pupils{
     width:20px;
@@ -62,6 +62,7 @@
     border-radius: 20px;
     position: fixed;
     top:40px;
+    transition: width 2s;
 }
 .leftHrt{
     position: absolute;
@@ -71,9 +72,41 @@
     position: absolute;
     right: 15%;
 }
-
+.centerHrt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);}
+.strand1{
+    background-color: #ffeeb6;
+    width: 20px;
+    height:60px;
+    position: absolute;
+    bottom: 85%;
+    left: 45%;
+    border-radius: 20px;
+}
+.strand2{
+    background-color: #ffeeb6;
+    width: 10px;
+    height:30px;
+    position: absolute;
+    bottom: 95%;
+    left: 56%;
+    border-radius: 20px;
+}
+div.bird:hover > .beak{
+    border-top: 40px solid #c72121;
+}
+div.bird:hover > .topHrt{
+    width:25%;
+    height:60%;
+}
+div.bird:hover > .pupils{
+    width: 15%;
+}
 #head{
-    padding: 50px;
+    padding: 0px;
     width: 300px;
     position: absolute;
     left:45%;
@@ -127,12 +160,13 @@
 .left{
     position: absolute;
     left: 26%;
-    bottom:-5%;
+    bottom:-50%;
+
 }
 .right{
     position: absolute;
     right: 50%;
-    bottom: -5%;
+    bottom: -50%;
 }
 
 .nose{
@@ -143,7 +177,7 @@
     border-right: 10px solid transparent;
     border-bottom: 20px solid rgb(0, 0, 0);
     left: 35%;
-    bottom: -18%;
+    bottom: -150%;
 }
 .mouth{
     width: 35px;
@@ -152,7 +186,7 @@
     border-radius:10px 0px 10px 10px ;
     position: absolute;
     left: 32.5%;
-    bottom: -32%;
+    bottom: -200%;
 
 }
 .neck{
@@ -161,5 +195,5 @@
     height:15px;
     width: 10px;
     left: 37%;
-    top:150%;
+    bottom:-300%;
 }
