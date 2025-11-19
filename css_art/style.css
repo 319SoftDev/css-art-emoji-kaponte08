@@ -8,7 +8,7 @@
     display: flex;
     width: 98vw;
     background-color: rgb(238, 165, 202);
-    height: 250vh;
+    height: auto;
     flex-direction: column;
 
 }
@@ -16,13 +16,14 @@
 .box{
     flex:1;
     margin: 10px;
-    padding: 20px;
+    padding: 80px;
     border: 2px solid black;
     background-color: rgb(235, 233, 255);
     border-radius: 20px;
-
     align-content: center;
     text-align: center;
+    justify-content: space-between;
+
 }
 
 .bird{
@@ -33,7 +34,8 @@
     position: relative;
     left:35%;
     background-color: #ffeeb6;
-    transition: width 2s ;
+    transition: width 2s, height 2s;
+    transition-timing-function: ease-in;
 }
 .bird:hover{
     width: 50%;
@@ -67,10 +69,13 @@
 .leftHrt{
     position: absolute;
     left: 15%;
+    transition: left 2s;
 }
 .rightHrt{
     position: absolute;
     right: 15%;
+    transition: left 2s;
+
 }
 .centerHrt{
   position: absolute;
@@ -99,101 +104,539 @@ div.bird:hover > .beak{
     border-top: 40px solid #c72121;
 }
 div.bird:hover > .topHrt{
+    top:15%;
     width:25%;
-    height:60%;
+    height:40%;
 }
 div.bird:hover > .pupils{
-    width: 15%;
+    width: 18%;
+    top:20%;
 }
-#head{
-    padding: 0px;
-    width: 300px;
-    position: absolute;
-    left:45%;
+div.bird:hover > .pupils.leftHrt{
+    left: -10%;
 }
-.head{
-    position: absolute;
-    height: 105px;
-    width: 100px;
-    border-radius: 60px;
-    background-color: rgb(255, 255, 255);
-    left: 21.2%;
+div.bird:hover > .pupils.rightHrt{
+    left: 90%;
 }
 
-.rect{
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    height:20px;
-    width: 100px;
-    left: 20.5%;
+div.bird:hover > .leftHrt{
+    left:-5%;
 }
-.halfCircle{
+div.bird:hover > .rightHrt{
+    left:80%;
+}
+
+.bird2{
+    margin-top:100px;
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    position: relative;
+    left:35%;
+    background-color: #ffeeb6;
+    transition: background-color 2s, rotate 20s ;
+    transition-timing-function: ease-in;
+}
+
+div.bird2:hover{
+    background-color: rgb(52, 165, 77);
+    rotate: 3600000deg;
+}
+
+div.bird2:hover > .topHrt{
+    background-color: rgb(255, 246, 246);
+}
+
+.bird3{
+    margin-top:100px;
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    position: relative;
+    left:35%;
+    background-color: #ffeeb6;
+    transition: left 1s;
+    transition-timing-function: ease-in;
+}
+
+div.bird3:hover {
+    left:80%;
+}
+
+.sackboy{
+    margin-top: 50px;
+    width:250px;
+    height: 500px;
+        position: relative;
+    left:35%;
+}
+.waving-sb{
+    margin-top: 50px;
+    width:250px;
+    height: 500px;
+        position: relative;
+    left:35%;
+}
+.body-sb{
+    background-color: #754630;
+    height:150px;
+    width:90px;
+    border-radius:40px;
     position: absolute;
-    width: 75px;
+    top:35.5%;
+    left: 20%;
+}
+.sb-head{
+    background-color: #754630;
+    width: 190px;
+    height: 195px;
+    border-radius: 80px;
+}
+.eyes-sb{
     height: 40px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 200px 200px 0px 0px;
-    top:20%;
-    left:25%;
-}
-.Wrect{
-    background-color: aliceblue;
-    position: absolute;
-    height:10px;
-    width: 75px;
-    left:25%;
-}
-.Rcircle{
-    position: absolute;
-    height: 10px;
-    width: 10px;
+    width: 35px;
     border-radius: 60px;
-    background-color: rgb(224, 15, 15);
-    left: 24%;
+    background-color: rgb(0, 0, 0);
+}
+.left-sb{
+    position: relative;
+    left: 20%;
+    top:33%;
+    height: 28px;
+        animation: blink-left;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.right-sb{
+    position: relative;
+    left:8pc;
+    top:15%;
+    animation: blink-right;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.eyes2-sb{
+    height: 38px;
+    width: 35px;
+    border-radius: 60px;
+    background-color: rgb(0, 0, 0);
+    animation: turning 3s;
+    animation-iteration-count: infinite;
+    top:3.5pc;
+
+}
+.left2-sb{
+    position: absolute;
+    left: 15%;
+}
+.right2-sb{
+    position: absolute;
+    left:50%;
+}
+
+.mouth-sb{
+    border-radius: 10px 10px 200px 200px;
+    border-bottom: solid 12px;
+    border-left: solid 12px;
+    border-right: solid 12px;
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    rotate: -5deg;
+}
+.mouth2-sb{
+    border-radius: 00px 00px 200px 200px;
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    rotate: -5deg;
+
+    animation: turning-mth 3s;
+    animation-iteration-count: infinite;
+}
+.tongue{
+    background-color: #e68495;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 9.6pc;
+    left: 7.2pc;
+    rotate: -15deg;
+    border-radius: 0px 0px 60px 60px;
+}
+.tongue2{
+    background-color: #e68495;
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    top: 9pc;
+    left: 5pc;
+    rotate: -5deg;
+    border-radius: 0px 0px 60px 60px;
+    animation: turning-tg 3s;
+    animation-iteration-count: infinite;
+}
+.arm-left{
+    background-color: rgb(94, 52, 32);
+    width: 42px;
+    height: 90px;
+    border-radius: 20px;
+    position: absolute;
+    top: 13pc;
+    left:1.7pc;
+    rotate: 25deg;
+    animation: moving-left 3s;
+    animation-iteration-count: infinite;
+}
+.arm-right{
+    background-color: rgb(94, 52, 32);
+    width: 42px;
+    height: 90px;
+    border-radius: 20px;
+    position: absolute;
+    top: 13pc;
+    left:7.5pc;
+    rotate: -25deg;
+    animation: moving-right 3s;
+    animation-iteration-count: infinite;
+}
+.arm2-left{
+    background-color: rgb(94, 52, 32);
+    width: 42px;
+    height: 90px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10pc;
+    left:0.5pc;
+    rotate: 25deg;
+    animation: moving2-left 3s;
+    animation-iteration-count: infinite;
+}
+.arm2-right{
+    background-color: rgb(94, 52, 32);
+    width: 25px;
+    height: 90px;
+    border-radius: 20px;
+    position: absolute;
+    top: 13pc;
+    left:8pc;
+    rotate: -25deg;
+    animation: moving2-right 3s;
+    animation-iteration-count: infinite;
+}
+.leg-left{
+    background-color: rgb(94, 52, 32);
+    width:35px;
+    height: 55px;
+    border-radius: 20px;
+    position: absolute;
+    top: 19pc;
+    left:4pc;
+}
+.leg-right{
+     background-color: rgb(94, 52, 32);
+    width: 35px;
+    height: 55px;
+    border-radius: 20px;
+    position: absolute;
+    top: 19pc;
+    left:6pc;
+}
+.leg2-left{
+    background-color: rgb(94, 52, 32);
+    width: 35px;
+    height: 55px;
+    border-radius: 20px;
+    position: absolute;
+    top: 19pc;
+    left:4pc;
+    animation: leg-turn 3s;
+    animation-iteration-count: infinite;
+}
+.zipper2{
+    position: absolute;
+    border-left: #f1eded solid 4px;
+    height: 125px;
+    left: 9pc;
+    top:12.4pc;
+    animation: move1 3s;
+    animation-iteration-count: infinite;
+}
+.zipper1{
+    position: absolute;
+    border-left: #f1eded solid 4px;
+    height: 125px;
+    left: 6pc;
+    top:12.4pc;
+}
+
+@keyframes blink-right{
+    0%{height: 40px;top:15%;}
+    25%{height: 5px;top:4.5pc}
+    50%{height: 22%;top:1pc;}
+    75%{height: 10px;top:4.5pc}
+    100%{height: 40px;top:15%;}
+}
+@keyframes blink-left{
+    0%{height: 28px;top:33%;}
+    25%{height: 5px;top:5pc}
+    50%{height: 34px;top:4pc;}
+    75%{height: 10px;top:5pc}
+    100%{height: 28px;top:33%;}
+}
+
+@keyframes moving-left {
+    0%{rotate: 25deg;}
+    50%{rotate: 35deg;}
+    100%{rotate: 25deg;}
+}
+@keyframes moving2-left {
+    0%{rotate: 0deg;top: 12pc;left:4pc;}
+    50%{rotate: 145deg;top:8pc}
+    100%{rotate: 100deg; top:10pc}
+}
+@keyframes moving-right {
+    0%{rotate: -25deg;}
+    50%{rotate: -35deg;}
+    100%{rotate: -25deg;}
+}
+@keyframes moving2-right {
+    0%{rotate: -25deg;left: 6pc;}
+    50%{rotate: -35deg;}
+    100%{rotate: -25deg;left: 8pc;}
+}
+@keyframes turning {
+    0%{left: 9.5pc;height: 10px;top:4pc}
+    40%{height: 60px;top:3pc;}
+    65%{height: 10px;top:5pc}
+}
+@keyframes turning-mth {
+    0%{left: 10pc;width: 10px; height: 10px;}
+    50%{left:3pc;width: 8pc;}
+}
+@keyframes turning-tg {
+    0%{left: 10pc;width: 10px;height: 0px;}
+    10%{height: 0;width: 0;}
+    50%{left:5pc;width: 4pc;}
+}
+@keyframes leg-turn {
+    0%{left: 6pc;}
+    50%{left: 3.2pc;rotate: 10deg;}
+}
+@keyframes move1 {
+    70%{left: 6.4pc;}
+    100%{left: 6.5pc;}
+}
+
+.shapeshifter{
+    position: absolute;
+    width: 200px;
+    height:200px;
+    background-color: #c72121;
+    margin: auto;
+    border-radius: 200px 0px 100px 20px;
+    animation-name: shifting;
+    animation-duration: 3.75s;
+    animation-iteration-count: infinite;
+    margin-top: 15pc;
+}
+@keyframes shifting{
+    0% {border-radius: 200px 10px 100px 20px;background-color:#00aeff;}
+    10% {border-radius: 50px 500px 73px 24px;background-color:#8e43e7;height: 215px; width: 340px;}
+    25% {border-radius: 10px 40px 40px 300px;background-color: #ff4f81;}
+    50%{border-radius: 0px 500px;background-color:#ff6c5f; height: 50px; width: 150px;}
+    65% {border-radius: 3px 100px 55px 70px;background-color: #ffc168;}
+    75% {border-radius: 100px 10px 200px 10px;background-color:#2dde98; }
+    100%{border-radius: 200px 10px 100px 20px;background-color: #1cc7d0; }
+}
+
+
+#emoji1{
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    padding: 40px;
+}
+.pigEar{
+    width: 0px;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 60px solid #faaaaa;
+    border-radius:400px;
+    left: -3pc;
+}
+
+.pig-head{
+    margin: auto;
+    width: 145px;
+    height: 148px;
+    background-color: #ffc7c7 ;
+    border-radius: 45%;
+    position: relative;
+
 }
 .eyes{
-    height: 30px;
-    width: 25px;
-    border-radius: 60px;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
+    width: 30px;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+    top:5pc;
 }
-.left{
-    position: absolute;
-    left: 26%;
-    bottom:-50%;
-
-}
-.right{
-    position: absolute;
-    right: 50%;
-    bottom: -50%;
+.eyeShine{
+    border: solid 3px white;
+    width: 12px;
+    border-radius: 200px;
 }
 
-.nose{
+.pRight{
     position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid rgb(0, 0, 0);
-    left: 35%;
-    bottom: -150%;
+    left: 7pc;
+    border-right: solid 5px #fd6f84;
+    border-bottom: solid 3px #fd6f84;
+
 }
-.mouth{
-    width: 35px;
+.pLeft{
+    position: absolute;
+    border-left: solid 5px #fd6f84;
+    border-bottom: solid 3px #fd6f84;
+
+}
+
+.pLeft2{
+    position: absolute;
+    border-left: solid 10px #fd6f84;
+
+}
+.pRight2{
+    position: absolute;
+    left: 7.5pc;
+    border-right: solid 10px #fd6f84;
+}
+.nosePig{
+    background-color: #ff95a8;
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 5.5pc;
+    left: 2.5pc;
+}
+.noseHole{
+    width:15px;
     height: 10px;
-    border-bottom: 4px solid black;
-    border-radius:10px 0px 10px 10px ;
-    position: absolute;
-    left: 32.5%;
-    bottom: -200%;
+    background-color: rgb(117, 32, 58);
+    border-radius: 30px;
+    position:absolute;
+    top: 1pc;
+}
+.Left{
+    left: 0.5pc;
+}
+.Right{
+    left: 2.3pc;
+}
+
+#emoji2{
+    width: 200px;
+    height: 250px;
+    margin: auto;
+}
+.ele{
+    background-color: #b9b9c4;
+    width: 135px;
+    height: 145px;
+    margin: auto;
+    border-radius: 200px;
+    position: relative;
 
 }
-.neck{
-    background-color: rgb(255, 255, 255);
+.l1{
     position: absolute;
-    height:15px;
-    width: 10px;
-    left: 37%;
-    bottom:-300%;
+    left: 0.5pc;
+    border-left: #50b6e6 solid 3px;
+    border-bottom: #50b6e6 solid 3px;
+
+}
+.r1{
+    position: absolute;
+    left: 6.5pc;
+    border-right: #50b6e6 solid 3px;
+    border-bottom: #50b6e6 solid 3px;
+
+}
+.trunk{
+    background-color: #9babc9;
+    height: 85px;
+    width: 45px;
+    border-radius: 10px 10px 30px 30px;
+    position: absolute;
+    top: 5.5pc;
+    left: 3pc;
+}
+.eleEars{
+    width: 80px;
+    height: 120px;
+    background-color: #e7b3bc;
+    top: 1pc;
+    border-radius: 50px;
+}
+.l2{
+    position: absolute;
+    left: -4pc;
+    rotate: -15deg;
+    border-left: solid 20px #99a5b9 ;
+    border-top: solid 20px #99a5b9 ;
+    border-right:solid 10px #99a5b9 ;
+    border-bottom: solid 5px #99a5b9;
+}
+.r2{
+    position: absolute;
+    left: 7.2pc;
+    rotate: 15deg;
+    border-left: solid 10px #99a5b9 ;
+    border-top: solid 20px #99a5b9 ;
+    border-right:solid 20px #99a5b9 ;
+    border-bottom: solid 5px #99a5b9;
+}
+#emoji3{
+    width: 200px;
+    height: 250px;
+    margin: auto;
+}
+.rabbitHead{
+    background-color:#c97748;
+    height: 110px;
+    width: 140px;
+    margin: auto;
+    border-radius: 250px 0px 200px 60px;
+    position: relative;
+
+}
+.rEar{
+    background-color: #e6826a;
+    height: 80px;
+    width: 70px;
+    border-radius: 200px 10px 200px 00px;
+    position: absolute;
+    top:-3pc;
+    right: -2pc;
+    border-left:solid 15px #c27244 ;
+    border-top:solid 5px #c27244;
+}
+
+.rabbitHead > .eyes{
+    width: 20px;
+    position: absolute;
+    top: 3pc;
+    right: 5pc;
 }
